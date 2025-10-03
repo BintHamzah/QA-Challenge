@@ -1,0 +1,12 @@
+{
+  "id": "venioe-local",
+  "name": "local",
+  "values": [
+    { "key": "baseUrl", "value": "https://api.venioe.com", "enabled": true },
+    { "key": "userEmail", "value": "nebati5699@cnguopin.com", "enabled": true },
+    { "key": "userPassword", "value": "Password1", "enabled": true }, 
+    { "key": "accessToken", "value": "", "enabled": true }
+
+  ],
+  "timestamp": 0
+}

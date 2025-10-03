@@ -1,0 +1,731 @@
+{
+	"info": {
+		"_postman_id": "81b93afd-c284-4709-b74a-22a80b76eb4f",
+		"name": "QA Challenge",
+		"description": "A comprehensive multi-tenant venue booking system API\n\nContact Support:\n Name: Venioe Support\n Email: support@venioe.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44182783",
+		"_collection_link": "https://orange-capsule-779083.postman.co/workspace/QA-Challenges~9131c34a-171f-4738-8ed9-d25bcc2ea57b/collection/44182783-81b93afd-c284-4709-b74a-22a80b76eb4f?action=share&source=collection_link&creator=44182783"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "auth",
+							"item": [
+								{
+									"name": "register",
+									"item": [
+										{
+											"name": "Login with email and password",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});\r",
+															"\r",
+															"let res;\r",
+															"try {\r",
+															"    res = pm.response.json();\r",
+															"} catch (e) {\r",
+															"    res = {};\r",
+															"}\r",
+															"\r",
+															"// Verify login success\r",
+															"pm.test(\"Login success flag\", function () {\r",
+															"    pm.expect(res.success).to.eql(true);\r",
+															"    pm.expect(res.message).to.eql(\"Login successful\");\r",
+															"});\r",
+															"\r",
+															"// Extract tokens\r",
+															"if (res.data && res.data.tokens) {\r",
+															"    let accessToken = res.data.tokens.access_token;\r",
+															"    let refreshToken = res.data.tokens.refresh_token;\r",
+															"\r",
+															"    // Save to collection variables\r",
+															"    pm.collectionVariables.set(\"bearerToken\", accessToken);\r",
+															"    pm.collectionVariables.set(\"refreshToken\", refreshToken);\r",
+															"\r",
+															"    console.log(\"Access token saved:\", accessToken);\r",
+															"} else {\r",
+															"    console.warn(\"No tokens found in response:\", res);\r",
+															"}\r",
+															"\r",
+															"// Save user details\r",
+															"if (res.data && res.data.user) {\r",
+															"    pm.collectionVariables.set(\"userId\", res.data.user.user_id);\r",
+															"    pm.collectionVariables.set(\"userFirstName\", res.data.user.first_name);\r",
+															"    pm.collectionVariables.set(\"userLastName\", res.data.user.last_name);\r",
+															"    pm.collectionVariables.set(\"userFullName\", `${res.data.user.first_name} ${res.data.user.last_name}`);\r",
+															"    pm.collectionVariables.set(\"userEmail\", res.data.user.email);\r",
+															"}\r",
+															"\r",
+															"// Check email verification\r",
+															"pm.test(\"Email is verified\", function () {\r",
+															"    pm.expect(res.data.user.is_email_verified).to.eql(true);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"{{userEmail}}\",\n  \"password\": \"{{userPassword}}\"\n}\n",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/auth/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"login"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Login successful",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"email\": \"y5c5lYOCYK@cncVLbvBFI.lljz\",\n  \"password\": \"string\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/login",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"login"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": true,\n  \"message\": \"string\",\n  \"data\": {\n    \"user\": {\n      \"user_id\": \"6189dc51-df04-167f-43f6-bfb526f127b8\",\n      \"email\": \"RG2VbNs@nvCGdxCCKvabEnplUsOkodlgCnBSaOv.gb\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"phone\": \"string\",\n      \"avatar_url\": \"string\",\n      \"birthday\": \"2021-10-31\",\n      \"preferred_country\": \"string\",\n      \"preferred_dining_location\": \"string\",\n      \"personal_notes\": \"string\",\n      \"allergens\": [\n        \"string\",\n        \"string\"\n      ],\n      \"is_email_verified\": false,\n      \"created_at\": \"1952-06-07T18:36:27.543Z\"\n    },\n    \"tokens\": {\n      \"access_token\": \"string\",\n      \"refresh_token\": \"string\",\n      \"expires_in\": 6503\n    }\n  },\n  \"errors\": [\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    }\n  ]\n}"
+												},
+												{
+													"name": "Invalid credentials",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"email\": \"y5c5lYOCYK@cncVLbvBFI.lljz\",\n  \"password\": \"string\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/login",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"login"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {},\n  \"errors\": [\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    }\n  ]\n}"
+												}
+											]
+										},
+										{
+											"name": "Get user profile",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"let res = pm.response.json();\r",
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});\r",
+															"//check user email\r",
+															"pm.test(\"User email matches saved variable\", function () {\r",
+															"    pm.expect(res.data.user.email).to.eql(pm.collectionVariables.get(\"userEmail\"));\r",
+															"});\r",
+															"// Check User ID\r",
+															"pm.test(\"User ID matches saved variable\", function () {\r",
+															"    pm.expect(res.data.user.user_id).to.eql(pm.collectionVariables.get(\"userId\"));\r",
+															"});\r",
+															"\r",
+															"// Check First Name\r",
+															"pm.test(\"First Name matches saved variable\", function () {\r",
+															"    pm.expect(res.data.user.first_name).to.eql(pm.collectionVariables.get(\"userFirstName\"));\r",
+															"});\r",
+															"\r",
+															"// Check Last Name\r",
+															"pm.test(\"Last Name matches saved variable\", function () {\r",
+															"    pm.expect(res.data.user.last_name).to.eql(pm.collectionVariables.get(\"userLastName\"));\r",
+															"}); \r",
+															"\r",
+															"//check if email is verifeid\r",
+															"pm.test(\"Check if email is verified\", function () {\r",
+															"    pm.expect(res.data.user.is_email_verified).to.be.true;\r",
+															"});\r",
+															"pm.test(\"Response time is less than 400ms\", function () {\r",
+															"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+															"});\r",
+															"\r",
+															"\r",
+															"// Define JSON Schema first\r",
+															"const schema = {\r",
+															"  type: \"object\",\r",
+															"  required: [\"success\", \"data\"],\r",
+															"  properties: {\r",
+															"    success: { type: \"boolean\" },\r",
+															"    data: {\r",
+															"      type: \"object\",\r",
+															"      required: [\"user\"],\r",
+															"      properties: {\r",
+															"        user: {\r",
+															"          type: \"object\",\r",
+															"          required: [\"user_id\", \"email\", \"first_name\", \"last_name\", \"phone\", \"is_email_verified\"],\r",
+															"          properties: {\r",
+															"            user_id: { type: \"string\" },\r",
+															"            email: { type: \"string\", format: \"email\" },\r",
+															"            first_name: { type: \"string\" },\r",
+															"            last_name: { type: \"string\" },\r",
+															"            phone: { type: \"string\" },\r",
+															"            is_email_verified: { type: \"boolean\" },\r",
+															"            created_at: { type: \"string\" },\r",
+															"            updated_at: { type: \"string\" }\r",
+															"          }\r",
+															"        }\r",
+															"      }\r",
+															"    }\r",
+															"  }\r",
+															"};\r",
+															"// Validate schema\r",
+															"pm.test(\"Response matches profile schema\", function () {\r",
+															"    pm.expect(tv4.validate(res, schema), ajv.error).to.be.true;\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/auth/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"profile"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Profile retrieved successfully",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/profile",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"profile"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"user\": {\n      \"user_id\": \"65f9a57e-ff6a-4c5e-313c-e11440cb0c28\",\n      \"email\": \"lQSnAVLfjmD@xiWzXPXSwovJaMPsaRWGhlA.ckf\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"phone\": \"string\",\n      \"avatar_url\": \"string\",\n      \"birthday\": \"1994-06-06\",\n      \"preferred_country\": \"string\",\n      \"preferred_dining_location\": \"string\",\n      \"personal_notes\": \"string\",\n      \"allergens\": [\n        \"string\",\n        \"string\"\n      ],\n      \"is_email_verified\": false,\n      \"created_at\": \"2003-07-03T11:27:35.462Z\"\n    },\n    \"current_role\": \"string\",\n    \"permissions\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"errors\": [\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    }\n  ]\n}"
+												},
+												{
+													"name": "Authentication required",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/profile",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"profile"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {},\n  \"errors\": [\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    }\n  ]\n}"
+												}
+											]
+										},
+										{
+											"name": "Update user profile",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});\r",
+															"pm.test(\"Response time is less than 400ms\", function () {\r",
+															"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"first_name\": \"Nora\",\n  \"last_name\": \"Iman\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/auth/profile",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"profile"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Profile updated successfully",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"phone\": \"+ -15  29 ᠎-\",\n  \"email\": \"7gCSqZX@DEnaYrxPUuxnZZSPmkfUIyA.gpn\",\n  \"birthday\": \"1998-10-17\",\n  \"preferred_country\": \"string\",\n  \"preferred_dining_location\": \"string\",\n  \"personal_notes\": \"string\",\n  \"allergens\": [\n    \"string\",\n    \"string\"\n  ],\n  \"avatar_url\": \"http://HqKs.uyfPL-hqcKHQW5dyHxgs0nutfGMWPSxsY-lnD+JC13P6wMG0Msmx.zePaE.QFweynQ-14TKotd\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/profile",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"profile"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {\n    \"user\": {\n      \"user_id\": \"5d3987b7-f80f-0dea-5792-074f6306d41f\",\n      \"email\": \"NwNsB3S@kWTwXqkLTdhAAhc.wlej\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"phone\": \"string\",\n      \"avatar_url\": \"string\",\n      \"birthday\": \"1976-05-30\",\n      \"preferred_country\": \"string\",\n      \"preferred_dining_location\": \"string\",\n      \"personal_notes\": \"string\",\n      \"allergens\": [\n        \"string\",\n        \"string\"\n      ],\n      \"is_email_verified\": true,\n      \"created_at\": \"2017-01-21T21:26:42.362Z\"\n    }\n  },\n  \"errors\": [\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    }\n  ]\n}"
+												},
+												{
+													"name": "Validation error",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"phone\": \"+ -15  29 ᠎-\",\n  \"email\": \"7gCSqZX@DEnaYrxPUuxnZZSPmkfUIyA.gpn\",\n  \"birthday\": \"1998-10-17\",\n  \"preferred_country\": \"string\",\n  \"preferred_dining_location\": \"string\",\n  \"personal_notes\": \"string\",\n  \"allergens\": [\n    \"string\",\n    \"string\"\n  ],\n  \"avatar_url\": \"http://HqKs.uyfPL-hqcKHQW5dyHxgs0nutfGMWPSxsY-lnD+JC13P6wMG0Msmx.zePaE.QFweynQ-14TKotd\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/profile",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"profile"
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {},\n  \"errors\": [\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    }\n  ]\n}"
+												},
+												{
+													"name": "Authentication required",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"phone\": \"+ -15  29 ᠎-\",\n  \"email\": \"7gCSqZX@DEnaYrxPUuxnZZSPmkfUIyA.gpn\",\n  \"birthday\": \"1998-10-17\",\n  \"preferred_country\": \"string\",\n  \"preferred_dining_location\": \"string\",\n  \"personal_notes\": \"string\",\n  \"allergens\": [\n    \"string\",\n    \"string\"\n  ],\n  \"avatar_url\": \"http://HqKs.uyfPL-hqcKHQW5dyHxgs0nutfGMWPSxsY-lnD+JC13P6wMG0Msmx.zePaE.QFweynQ-14TKotd\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/auth/profile",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"auth",
+																"profile"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {},\n  \"errors\": [\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"message\": \"string\"\n    }\n  ]\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.venioe.com"
+		},
+		{
+			"key": "userPassword",
+			"value": ""
+		},
+		{
+			"key": "userEmail",
+			"value": ""
+		},
+		{
+			"key": "userId",
+			"value": ""
+		},
+		{
+			"key": "userFirstName",
+			"value": ""
+		},
+		{
+			"key": "userLastName",
+			"value": ""
+		},
+		{
+			"key": "userFullName",
+			"value": ""
+		},
+		{
+			"key": "bearerToken",
+			"value": ""
+		},
+		{
+			"key": "refreshToken",
+			"value": ""
+		}
+	]
+}
