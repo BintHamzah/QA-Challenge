@@ -35,6 +35,19 @@ jobs:
             --reporter-htmlextra-export ./reports/report.html \
             --reporter-junit-export ./reports/junit.xml
 
+      - name: Create index.html for redirect
+        run: |
+          echo '<!DOCTYPE html>
+          <html>
+            <head>
+              <meta http-equiv="refresh" content="0; URL='\''report.html'\''" />
+              <title>QA Automation Report</title>
+            </head>
+            <body>
+              <p>Redirecting to <a href="report.html">report.html</a></p>
+            </body>
+          </html>' > reports/index.html
+
       - name: Upload reports as artifact
         uses: actions/upload-artifact@v4
         with:
