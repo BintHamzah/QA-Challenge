@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="QA Challenge" tests="3" time="0.278">
-  <testsuite name="api / v1 / auth / register / Login with email and password" id="1cfba22b-e1be-4ae2-a148-98d668b637ec" timestamp="2026-02-19T07:10:02.928Z" tests="3" failures="3" errors="0" time="0.226">
-    <testcase name="Status code is 200" time="0.226" classname="ApiV1AuthRegisterLoginWithEmailAndPassword">
+<testsuites name="QA Challenge" tests="3" time="0.262">
+  <testsuite name="api / v1 / auth / register / Login with email and password" id="81f7b888-d9cf-4d3d-be4c-b35940dae7db" timestamp="2026-02-19T08:55:37.953Z" tests="3" failures="3" errors="0" time="0.211">
+    <testcase name="Status code is 200" time="0.211" classname="ApiV1AuthRegisterLoginWithEmailAndPassword">
       <failure type="AssertionFailure" message="expected response to have status code 200 but got 502">
         <![CDATA[Failed 1 times.]]>
         <![CDATA[Collection JSON ID: 81b93afd-c284-4709-b74a-22a80b76eb4f.]]>
@@ -13,7 +13,7 @@
    at Object.eval sandbox-script.js:1:1).]]>
       </failure>
     </testcase>
-    <testcase name="Login success flag" time="0.226" classname="ApiV1AuthRegisterLoginWithEmailAndPassword">
+    <testcase name="Login success flag" time="0.211" classname="ApiV1AuthRegisterLoginWithEmailAndPassword">
       <failure type="AssertionFailure" message="expected undefined to deeply equal true">
         <![CDATA[Failed 1 times.]]>
         <![CDATA[Collection JSON ID: 81b93afd-c284-4709-b74a-22a80b76eb4f.]]>
@@ -25,7 +25,7 @@
    at Object.eval sandbox-script.js:2:1).]]>
       </failure>
     </testcase>
-    <testcase name="Email is verified" time="0.226" classname="ApiV1AuthRegisterLoginWithEmailAndPassword">
+    <testcase name="Email is verified" time="0.211" classname="ApiV1AuthRegisterLoginWithEmailAndPassword">
       <failure type="AssertionFailure" message="Cannot read properties of undefined (reading 'user')">
         <![CDATA[Failed 1 times.]]>
         <![CDATA[Collection JSON ID: 81b93afd-c284-4709-b74a-22a80b76eb4f.]]>
@@ -38,7 +38,7 @@
       </failure>
     </testcase>
   </testsuite>
-  <testsuite name="api / v1 / auth / register / Get user profile" id="5b2dbaf9-8b87-4e4c-a2da-b08ae02236fa" timestamp="2026-02-19T07:10:02.928Z" tests="0" failures="0" errors="1" time="0.027">
+  <testsuite name="api / v1 / auth / register / Get user profile" id="e7a753dc-db93-4229-b9e5-7558c6361779" timestamp="2026-02-19T08:55:37.953Z" tests="0" failures="0" errors="1" time="0.026">
     <system-err><![CDATA[Iteration: 0
 
 ---
@@ -48,7 +48,7 @@ testScriptError: Unexpected token '<' at 1:1
 ---
 ]]></system-err>
   </testsuite>
-  <testsuite name="api / v1 / auth / register / Update user profile" id="097be1ad-3df0-41b9-91bc-d6e12984aaf7" timestamp="2026-02-19T07:10:02.928Z" tests="2" failures="1" errors="0" time="0.025">
+  <testsuite name="api / v1 / auth / register / Update user profile" id="68d13011-900f-4798-924b-6b9c90a977ba" timestamp="2026-02-19T08:55:37.953Z" tests="2" failures="1" errors="0" time="0.025">
     <testcase name="Status code is 200" time="0.025" classname="ApiV1AuthRegisterUpdateUserProfile">
       <failure type="AssertionFailure" message="expected response to have status code 200 but got 502">
         <![CDATA[Failed 1 times.]]>
