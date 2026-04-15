@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="QA Challenge" tests="3" time="0.862">
-  <testsuite name="api / v1 / auth / register / Login with email and password" id="992bf0e2-1cff-4f39-9dec-c17173906e45" timestamp="2026-04-15T15:12:48.266Z" tests="3" failures="0" errors="0" time="0.768">
-    <testcase name="Status code is 200" time="0.768" classname="ApiV1AuthRegisterLoginWithEmailAndPassword"/>
-    <testcase name="Login success flag" time="0.768" classname="ApiV1AuthRegisterLoginWithEmailAndPassword"/>
-    <testcase name="Email is verified" time="0.768" classname="ApiV1AuthRegisterLoginWithEmailAndPassword"/>
+<testsuites name="QA Challenge" tests="3" time="0.874">
+  <testsuite name="api / v1 / auth / register / Login with email and password" id="8eb26c86-ce62-49a1-80ea-520184335907" timestamp="2026-04-15T17:14:59.715Z" tests="3" failures="0" errors="0" time="0.729">
+    <testcase name="Status code is 200" time="0.729" classname="ApiV1AuthRegisterLoginWithEmailAndPassword"/>
+    <testcase name="Login success flag" time="0.729" classname="ApiV1AuthRegisterLoginWithEmailAndPassword"/>
+    <testcase name="Email is verified" time="0.729" classname="ApiV1AuthRegisterLoginWithEmailAndPassword"/>
   </testsuite>
-  <testsuite name="api / v1 / auth / register / Get user profile" id="7ec82442-27f2-4ffe-b682-dd8f7ced0d61" timestamp="2026-04-15T15:12:48.266Z" tests="8" failures="0" errors="0" time="0.049">
-    <testcase name="Status code is 200" time="0.049" classname="ApiV1AuthRegisterGetUserProfile"/>
-    <testcase name="User email matches saved variable" time="0.049" classname="ApiV1AuthRegisterGetUserProfile"/>
-    <testcase name="User ID matches saved variable" time="0.049" classname="ApiV1AuthRegisterGetUserProfile"/>
-    <testcase name="First Name matches saved variable" time="0.049" classname="ApiV1AuthRegisterGetUserProfile"/>
-    <testcase name="Last Name matches saved variable" time="0.049" classname="ApiV1AuthRegisterGetUserProfile"/>
-    <testcase name="Check if email is verified" time="0.049" classname="ApiV1AuthRegisterGetUserProfile"/>
-    <testcase name="Response time is less than 600ms" time="0.049" classname="ApiV1AuthRegisterGetUserProfile"/>
-    <testcase name="Response matches profile schema" time="0.049" classname="ApiV1AuthRegisterGetUserProfile"/>
+  <testsuite name="api / v1 / auth / register / Get user profile" id="d8154a69-1ca8-4ccb-a2d6-5fe2dc5fa902" timestamp="2026-04-15T17:14:59.715Z" tests="8" failures="0" errors="0" time="0.085">
+    <testcase name="Status code is 200" time="0.085" classname="ApiV1AuthRegisterGetUserProfile"/>
+    <testcase name="User email matches saved variable" time="0.085" classname="ApiV1AuthRegisterGetUserProfile"/>
+    <testcase name="User ID matches saved variable" time="0.085" classname="ApiV1AuthRegisterGetUserProfile"/>
+    <testcase name="First Name matches saved variable" time="0.085" classname="ApiV1AuthRegisterGetUserProfile"/>
+    <testcase name="Last Name matches saved variable" time="0.085" classname="ApiV1AuthRegisterGetUserProfile"/>
+    <testcase name="Check if email is verified" time="0.085" classname="ApiV1AuthRegisterGetUserProfile"/>
+    <testcase name="Response time is less than 600ms" time="0.085" classname="ApiV1AuthRegisterGetUserProfile"/>
+    <testcase name="Response matches profile schema" time="0.085" classname="ApiV1AuthRegisterGetUserProfile"/>
   </testsuite>
-  <testsuite name="api / v1 / auth / register / Update user profile" id="7a47d3fc-3c48-495b-a7cc-68bb430bfef9" timestamp="2026-04-15T15:12:48.266Z" tests="2" failures="0" errors="0" time="0.045">
-    <testcase name="Status code is 200" time="0.045" classname="ApiV1AuthRegisterUpdateUserProfile"/>
-    <testcase name="Response time is less than 600ms" time="0.045" classname="ApiV1AuthRegisterUpdateUserProfile"/>
+  <testsuite name="api / v1 / auth / register / Update user profile" id="bb02e44a-4dcb-481b-a4a3-b78d7d2c6494" timestamp="2026-04-15T17:14:59.715Z" tests="2" failures="0" errors="0" time="0.060">
+    <testcase name="Status code is 200" time="0.060" classname="ApiV1AuthRegisterUpdateUserProfile"/>
+    <testcase name="Response time is less than 600ms" time="0.060" classname="ApiV1AuthRegisterUpdateUserProfile"/>
   </testsuite>
 </testsuites>
