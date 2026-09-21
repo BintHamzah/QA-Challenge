@@ -472,7 +472,7 @@ body.theme-light code {
                 <a class="nav-link text-white" id="pills-requests-tab" data-toggle="pill" href="#pills-requests" role="tab" aria-controls="pills-requests" aria-selected="false">Total Requests <span class="badge badge-light">3</span></a>
             </li>
             <li class="nav-item bg-danger" data-toggle="tooltip" title="Click to view the Failed Tests">
-                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">1</span></a>
+                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">0</span></a>
             </li>
             <li class="nav-item bg-warning" data-toggle="tooltip" title="Click to view the Skipped Tests">
                 <a class="nav-link text-white" id="pills-skipped-tab" data-toggle="pill" href="#pills-skipped" role="tab" aria-controls="pills-skipped" aria-selected="false">Skipped Tests <span class="badge badge-light">0</span></a>
@@ -483,11 +483,11 @@ body.theme-light code {
 <div class="row">
   <div class="col-md-9 col-lg-12 main">
    <h1 class="display-2 text-center">Newman Run Dashboard</h1>
-   <h5 class="text-center">Monday, 21 September 2026 00:04:14</h5>
+   <h5 class="text-center">Monday, 21 September 2026 07:52:05</h5>
    <div class="row">
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-success">
-      <div class="card-body bg-danger">
+      <div class="card-body bg-success">
        <div class="rotate">
         <i class="fa fa-retweet fa-5x"></i>
        </div>
@@ -509,12 +509,12 @@ body.theme-light code {
     </div>
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-info">
-      <div class="card-body bg-danger">
+      <div class="card-body bg-success">
        <div class="rotate">
         <i class="fa fa-plus-circle fa-5x"></i>
        </div>
        <h6 class="text-uppercase">Total Failed Tests</h6>
-       <h1 class="display-1">1</h1>
+       <h1 class="display-1">0</h1>
       </div>
      </div>
     </div>
@@ -566,9 +566,9 @@ Contact Support:
             <div class="card border-info">
                 <div class="card-body">
                 <h5 class="card-title text-uppercase text-white text-center bg-info">Timings and Data</h5>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 2.8s<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 955ms<br>
                 <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 3.9KB<br>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 881ms<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 269ms<br>
                 </div>
             </div>
         </div>
@@ -600,10 +600,10 @@ Contact Support:
                         <td class="text-center">6</td>
                         <td class="text-center">0</td>
                     </tr>
-                    <tr class="table-danger">
+                    <tr class="">
                         <td>Assertions</td>
                         <td class="text-center">13</td>
-                        <td class="text-center">1</td>
+                        <td class="text-center">0</td>
                     </tr>
                     <tr class="">
                         <td>Skipped Tests</td>
@@ -624,36 +624,9 @@ Contact Support:
             <div class="tab-pane fade" id="pills-failed" role="tabcard" aria-labelledby="pills-failed-tab">
                 <button id="topOfFailuresScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
-                    <div class="btn-group float-right" role="group" aria-label="Button Group">
-                        <button id="openAllFailed" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 185px;">Expand All Failed Tests</button>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="alert alert-danger text-uppercase text-center">
-                        <h4>Showing 1 Failure</h4>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-6b335790-640c-4dd8-a808-f1b5c7bee8a9" aria-expanded="false" aria-controls="collapse" id="fails-6b335790-640c-4dd8-a808-f1b5c7bee8a9" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - register - Update user profile <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-6b335790-640c-4dd8-a808-f1b5c7bee8a9" class="collapse" aria-labelledby="fails-6b335790-640c-4dd8-a808-f1b5c7bee8a9">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Response time is less than 600ms</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected 1498 to be below 600</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                <div class="alert alert-success text-uppercase text-center">
+                     <br><br><h1 class="text-center">There are no failed tests <span><i class="far fa-thumbs-up"></i></span></h1><br><br>
+                </div>
             </div>
 
             <div class="tab-pane fade" id="pills-skipped" role="tabcard" aria-labelledby="pills-skipped-tab">
@@ -668,7 +641,6 @@ Contact Support:
             <button id="topOfRequestsScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
             <div class="btn-group float-right" role="group" aria-label="Button Group">
-                <button id="showOnlyFailures" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width:160px;">Show Failed Iterations</button>
                 <button id="openAll" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Folders</button>
                 <button id="openAllRequests" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Requests</button>
             </div>
@@ -684,22 +656,22 @@ Contact Support:
     <h6 class="text-uppercase text-muted" id="iterationSelected" style="padding-top: 10px;"></h6>
 	<div class="tab-content" id="execution-data">
         <div class="alert alert-dark text-uppercase text-center iteration-0">
-        <a data-toggle="collapse" href="#" data-target="#folder-collapse-025d475d-a7d9-402b-b999-1581686b863d-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-025d475d-a7d9-402b-b999-1581686b863d-iteration-0" class="collapsed text-dark z-block">
-        <i class="fas fa-info-circle float-left resultsInfoPass"  style="color: #c24a3f; padding-top: 4px;"></i>
+        <a data-toggle="collapse" href="#" data-target="#folder-collapse-d1a0e893-c82b-4e4e-8f40-56c345f008c3-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-d1a0e893-c82b-4e4e-8f40-56c345f008c3-iteration-0" class="collapsed text-dark z-block">
+        <i class="fas fa-info-circle float-left resultsInfoPass" ></i>
             api / v1 / auth / register - 3 Requests in the folder<i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
         </a>
         </div>
-        <div id="folder-collapse-025d475d-a7d9-402b-b999-1581686b863d-iteration-0" class="collapse" aria-labelledby="folder-025d475d-a7d9-402b-b999-1581686b863d">
-            <div id="folder-1856efbe-fb07-4fa0-a3ad-35d95978ff1f" class="card-deck iteration-0">
+        <div id="folder-collapse-d1a0e893-c82b-4e4e-8f40-56c345f008c3-iteration-0" class="collapse" aria-labelledby="folder-d1a0e893-c82b-4e4e-8f40-56c345f008c3">
+            <div id="folder-5de89928-a676-445a-98f7-cb44168e82a4" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f" aria-expanded="false" aria-controls="collapse" id="requests-1856efbe-fb07-4fa0-a3ad-35d95978ff1f" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-5de89928-a676-445a-98f7-cb44168e82a4" aria-expanded="false" aria-controls="collapse" id="requests-5de89928-a676-445a-98f7-cb44168e82a4" class="collapsed text-white z-block">
                     Iteration: 1 - Login with email and password <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f" class="collapse" aria-labelledby="requests-1856efbe-fb07-4fa0-a3ad-35d95978ff1f">
+                    <div id="collapse-5de89928-a676-445a-98f7-cb44168e82a4" class="collapse" aria-labelledby="requests-5de89928-a676-445a-98f7-cb44168e82a4">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -715,7 +687,7 @@ Contact Support:
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 1011ms</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 731ms</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 2.11KB</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
@@ -759,7 +731,7 @@ Contact Support:
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">85582e01-f1e7-4812-ab14-92ba3c13ecd1</td>
+                                                        <td class="text-wrap">5886e36c-7f1c-4df7-878e-afa00d47fdd0</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -822,7 +794,7 @@ Contact Support:
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 21 Sep 2026 00:04:12 GMT</td>
+                                                    <td class="text-wrap">Mon, 21 Sep 2026 07:52:04 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
@@ -902,7 +874,7 @@ Contact Support:
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-RateLimit-Remaining</td>
-                                                    <td class="text-wrap">99993</td>
+                                                    <td class="text-wrap">99989</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-RateLimit-Reset</td>
@@ -910,7 +882,7 @@ Contact Support:
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">ETag</td>
-                                                    <td class="text-wrap">W/&quot;86c-73mLe9quBVfgxdd9dy93Rt1yRAM&quot;</td>
+                                                    <td class="text-wrap">W/&quot;86c-tMC7/AIRARkGxWOppdtEZZYLU+Y&quot;</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Encoding</td>
@@ -931,10 +903,10 @@ Contact Support:
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-c4fafcd5-8ded-4e7d-9a2c-3587d1fa60a1" class="prettyPrint">{&quot;success&quot;:true,&quot;message&quot;:&quot;Login successful&quot;,&quot;data&quot;:{&quot;user&quot;:{&quot;user_id&quot;:&quot;c8df22bc-349a-4934-8b80-78082394ae28&quot;,&quot;email&quot;:&quot;nebati5699@cnguopin.com&quot;,&quot;first_name&quot;:&quot;Nora&quot;,&quot;last_name&quot;:&quot;Iman&quot;,&quot;phone&quot;:&quot;13344545454&quot;,&quot;avatar_url&quot;:null,&quot;is_email_verified&quot;:true,&quot;created_at&quot;:&quot;2025-09-24 11:26:26&quot;},&quot;tokens&quot;:{&quot;access_token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzhkZjIyYmMtMzQ5YS00OTM0LThiODAtNzgwODIzOTRhZTI4IiwiZW1haWwiOiJuZWJhdGk1Njk5QGNuZ3VvcGluLmNvbSIsInRlbmFudF9jb250ZXh0Ijp7InRlbmFudF9pZCI6IjJhZDE2ZTE2LTI1NWMtNGEyMy05ZjMwLTAxOTBmM2M5M2MwYiIsInJvbGUiOiJIT1NUIiwicGVybWlzc2lvbnMiOlsiTUFOQUdFX1JFU0VSVkFUSU9OU19IT1NUIiwiTUFOQUdFX1JFU0VSVkFUSU9OUyIsIlVQREFURV9UQUJMRV9TVEFUVVMiLCJNQU5BR0VfVEFCTEVTIiwiTUFOQUdFX1dBSVRMSVNUIiwiQ0hFQ0tfSU5fR1VFU1RTIl19LCJhdmFpbGFibGVfdGVuYW50cyI6W3sidGVuYW50X2lkIjoiMmFkMTZlMTYtMjU1Yy00YTIzLTlmMzAtMDE5MGYzYzkzYzBiIiwicm9sZSI6IkhPU1QiLCJwZXJtaXNzaW9ucyI6WyJNQU5BR0VfUkVTRVJWQVRJT05TX0hPU1QiLCJNQU5BR0VfUkVTRVJWQVRJT05TIiwiVVBEQVRFX1RBQkxFX1NUQVRVUyIsIk1BTkFHRV9UQUJMRVMiLCJNQU5BR0VfV0FJVExJU1QiLCJDSEVDS19JTl9HVUVTVFMiXX0seyJ0ZW5hbnRfaWQiOiI2OTFlMTI2OS02MzYxLTQ0YjctODMzOS02YmM5ZGFjYjZiMzQiLCJyb2xlIjoiSE9TVCIsInBlcm1pc3Npb25zIjpbIk1BTkFHRV9SRVNFUlZBVElPTlNfSE9TVCIsIk1BTkFHRV9SRVNFUlZBVElPTlMiLCJVUERBVEVfVEFCTEVfU1RBVFVTIiwiTUFOQUdFX1RBQkxFUyIsIkNIRUNLX0lOX0dVRVNUUyIsIk1BTkFHRV9XQUlUTElTVCIsIlZJRVdfQU5BTFlUSUNTIl19XSwiaWF0IjoxNzg5OTQ5MDUyLCJleHAiOjE3OTAwMzU0NTJ9.wruzsb8EsB6b6K6yFniKYkLbxB-TdSWSsk3zSmQ1yo0&quot;,&quot;refresh_token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzhkZjIyYmMtMzQ5YS00OTM0LThiODAtNzgwODIzOTRhZTI4IiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3ODk5NDkwNTIsImV4cCI6MTc5MDU1Mzg1Mn0.LMigIQWQntj5lKYIfPCzKcwDqT0vFjJC3YzAUGYGJew&quot;,&quot;expires_in&quot;:86400},&quot;available_tenants&quot;:[{&quot;tenant_id&quot;:&quot;2ad16e16-255c-4a23-9f30-0190f3c93c0b&quot;,&quot;role&quot;:&quot;HOST&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;CHECK_IN_GUESTS&quot;]},{&quot;tenant_id&quot;:&quot;691e1269-6361-44b7-8339-6bc9dacb6b34&quot;,&quot;role&quot;:&quot;HOST&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;CHECK_IN_GUESTS&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;VIEW_ANALYTICS&quot;]}]}}</code></pre>
+                                                <pre><code id="copyText-4a84fb26-ccff-4633-90ba-beaae44015b1" class="prettyPrint">{&quot;success&quot;:true,&quot;message&quot;:&quot;Login successful&quot;,&quot;data&quot;:{&quot;user&quot;:{&quot;user_id&quot;:&quot;c8df22bc-349a-4934-8b80-78082394ae28&quot;,&quot;email&quot;:&quot;nebati5699@cnguopin.com&quot;,&quot;first_name&quot;:&quot;Nora&quot;,&quot;last_name&quot;:&quot;Iman&quot;,&quot;phone&quot;:&quot;13344545454&quot;,&quot;avatar_url&quot;:null,&quot;is_email_verified&quot;:true,&quot;created_at&quot;:&quot;2025-09-24 11:26:26&quot;},&quot;tokens&quot;:{&quot;access_token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzhkZjIyYmMtMzQ5YS00OTM0LThiODAtNzgwODIzOTRhZTI4IiwiZW1haWwiOiJuZWJhdGk1Njk5QGNuZ3VvcGluLmNvbSIsInRlbmFudF9jb250ZXh0Ijp7InRlbmFudF9pZCI6IjJhZDE2ZTE2LTI1NWMtNGEyMy05ZjMwLTAxOTBmM2M5M2MwYiIsInJvbGUiOiJIT1NUIiwicGVybWlzc2lvbnMiOlsiTUFOQUdFX1JFU0VSVkFUSU9OU19IT1NUIiwiTUFOQUdFX1JFU0VSVkFUSU9OUyIsIlVQREFURV9UQUJMRV9TVEFUVVMiLCJNQU5BR0VfVEFCTEVTIiwiTUFOQUdFX1dBSVRMSVNUIiwiQ0hFQ0tfSU5fR1VFU1RTIl19LCJhdmFpbGFibGVfdGVuYW50cyI6W3sidGVuYW50X2lkIjoiMmFkMTZlMTYtMjU1Yy00YTIzLTlmMzAtMDE5MGYzYzkzYzBiIiwicm9sZSI6IkhPU1QiLCJwZXJtaXNzaW9ucyI6WyJNQU5BR0VfUkVTRVJWQVRJT05TX0hPU1QiLCJNQU5BR0VfUkVTRVJWQVRJT05TIiwiVVBEQVRFX1RBQkxFX1NUQVRVUyIsIk1BTkFHRV9UQUJMRVMiLCJNQU5BR0VfV0FJVExJU1QiLCJDSEVDS19JTl9HVUVTVFMiXX0seyJ0ZW5hbnRfaWQiOiI2OTFlMTI2OS02MzYxLTQ0YjctODMzOS02YmM5ZGFjYjZiMzQiLCJyb2xlIjoiSE9TVCIsInBlcm1pc3Npb25zIjpbIk1BTkFHRV9SRVNFUlZBVElPTlNfSE9TVCIsIk1BTkFHRV9SRVNFUlZBVElPTlMiLCJVUERBVEVfVEFCTEVfU1RBVFVTIiwiTUFOQUdFX1RBQkxFUyIsIkNIRUNLX0lOX0dVRVNUUyIsIk1BTkFHRV9XQUlUTElTVCIsIlZJRVdfQU5BTFlUSUNTIl19XSwiaWF0IjoxNzg5OTc3MTI0LCJleHAiOjE3OTAwNjM1MjR9.J2Hv_0Nkbrf2TmQ3OB6kMAVzjSD5S4LANgV7qDQoRTg&quot;,&quot;refresh_token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzhkZjIyYmMtMzQ5YS00OTM0LThiODAtNzgwODIzOTRhZTI4IiwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3ODk5NzcxMjQsImV4cCI6MTc5MDU4MTkyNH0.V510caBEj84icyYeBJqRL6BS9V1xyNGMyW-Uj5A-HKg&quot;,&quot;expires_in&quot;:86400},&quot;available_tenants&quot;:[{&quot;tenant_id&quot;:&quot;2ad16e16-255c-4a23-9f30-0190f3c93c0b&quot;,&quot;role&quot;:&quot;HOST&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;CHECK_IN_GUESTS&quot;]},{&quot;tenant_id&quot;:&quot;691e1269-6361-44b7-8339-6bc9dacb6b34&quot;,&quot;role&quot;:&quot;HOST&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;CHECK_IN_GUESTS&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;VIEW_ANALYTICS&quot;]}]}}</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-c4fafcd5-8ded-4e7d-9a2c-3587d1fa60a1">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-4a84fb26-ccff-4633-90ba-beaae44015b1">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1005,16 +977,16 @@ Contact Support:
                 </div>
             </div>
             </div>
-            <div id="folder-ec32ca34-d862-4d38-80e7-71a81b5fc2d1" class="card-deck iteration-0">
+            <div id="folder-18a5830a-e84f-491e-ba78-945c5eb1eedd" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1" aria-expanded="false" aria-controls="collapse" id="requests-ec32ca34-d862-4d38-80e7-71a81b5fc2d1" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd" aria-expanded="false" aria-controls="collapse" id="requests-18a5830a-e84f-491e-ba78-945c5eb1eedd" class="collapsed text-white z-block">
                     Iteration: 1 - Get user profile <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1" class="collapse" aria-labelledby="requests-ec32ca34-d862-4d38-80e7-71a81b5fc2d1">
+                    <div id="collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd" class="collapse" aria-labelledby="requests-18a5830a-e84f-491e-ba78-945c5eb1eedd">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1030,7 +1002,7 @@ Contact Support:
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 136ms</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 39ms</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 1.4KB</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
@@ -1062,7 +1034,7 @@ Contact Support:
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Authorization</td>
-                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzhkZjIyYmMtMzQ5YS00OTM0LThiODAtNzgwODIzOTRhZTI4IiwiZW1haWwiOiJuZWJhdGk1Njk5QGNuZ3VvcGluLmNvbSIsInRlbmFudF9jb250ZXh0Ijp7InRlbmFudF9pZCI6IjJhZDE2ZTE2LTI1NWMtNGEyMy05ZjMwLTAxOTBmM2M5M2MwYiIsInJvbGUiOiJIT1NUIiwicGVybWlzc2lvbnMiOlsiTUFOQUdFX1JFU0VSVkFUSU9OU19IT1NUIiwiTUFOQUdFX1JFU0VSVkFUSU9OUyIsIlVQREFURV9UQUJMRV9TVEFUVVMiLCJNQU5BR0VfVEFCTEVTIiwiTUFOQUdFX1dBSVRMSVNUIiwiQ0hFQ0tfSU5fR1VFU1RTIl19LCJhdmFpbGFibGVfdGVuYW50cyI6W3sidGVuYW50X2lkIjoiMmFkMTZlMTYtMjU1Yy00YTIzLTlmMzAtMDE5MGYzYzkzYzBiIiwicm9sZSI6IkhPU1QiLCJwZXJtaXNzaW9ucyI6WyJNQU5BR0VfUkVTRVJWQVRJT05TX0hPU1QiLCJNQU5BR0VfUkVTRVJWQVRJT05TIiwiVVBEQVRFX1RBQkxFX1NUQVRVUyIsIk1BTkFHRV9UQUJMRVMiLCJNQU5BR0VfV0FJVExJU1QiLCJDSEVDS19JTl9HVUVTVFMiXX0seyJ0ZW5hbnRfaWQiOiI2OTFlMTI2OS02MzYxLTQ0YjctODMzOS02YmM5ZGFjYjZiMzQiLCJyb2xlIjoiSE9TVCIsInBlcm1pc3Npb25zIjpbIk1BTkFHRV9SRVNFUlZBVElPTlNfSE9TVCIsIk1BTkFHRV9SRVNFUlZBVElPTlMiLCJVUERBVEVfVEFCTEVfU1RBVFVTIiwiTUFOQUdFX1RBQkxFUyIsIkNIRUNLX0lOX0dVRVNUUyIsIk1BTkFHRV9XQUlUTElTVCIsIlZJRVdfQU5BTFlUSUNTIl19XSwiaWF0IjoxNzg5OTQ5MDUyLCJleHAiOjE3OTAwMzU0NTJ9.wruzsb8EsB6b6K6yFniKYkLbxB-TdSWSsk3zSmQ1yo0</td>
+                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzhkZjIyYmMtMzQ5YS00OTM0LThiODAtNzgwODIzOTRhZTI4IiwiZW1haWwiOiJuZWJhdGk1Njk5QGNuZ3VvcGluLmNvbSIsInRlbmFudF9jb250ZXh0Ijp7InRlbmFudF9pZCI6IjJhZDE2ZTE2LTI1NWMtNGEyMy05ZjMwLTAxOTBmM2M5M2MwYiIsInJvbGUiOiJIT1NUIiwicGVybWlzc2lvbnMiOlsiTUFOQUdFX1JFU0VSVkFUSU9OU19IT1NUIiwiTUFOQUdFX1JFU0VSVkFUSU9OUyIsIlVQREFURV9UQUJMRV9TVEFUVVMiLCJNQU5BR0VfVEFCTEVTIiwiTUFOQUdFX1dBSVRMSVNUIiwiQ0hFQ0tfSU5fR1VFU1RTIl19LCJhdmFpbGFibGVfdGVuYW50cyI6W3sidGVuYW50X2lkIjoiMmFkMTZlMTYtMjU1Yy00YTIzLTlmMzAtMDE5MGYzYzkzYzBiIiwicm9sZSI6IkhPU1QiLCJwZXJtaXNzaW9ucyI6WyJNQU5BR0VfUkVTRVJWQVRJT05TX0hPU1QiLCJNQU5BR0VfUkVTRVJWQVRJT05TIiwiVVBEQVRFX1RBQkxFX1NUQVRVUyIsIk1BTkFHRV9UQUJMRVMiLCJNQU5BR0VfV0FJVExJU1QiLCJDSEVDS19JTl9HVUVTVFMiXX0seyJ0ZW5hbnRfaWQiOiI2OTFlMTI2OS02MzYxLTQ0YjctODMzOS02YmM5ZGFjYjZiMzQiLCJyb2xlIjoiSE9TVCIsInBlcm1pc3Npb25zIjpbIk1BTkFHRV9SRVNFUlZBVElPTlNfSE9TVCIsIk1BTkFHRV9SRVNFUlZBVElPTlMiLCJVUERBVEVfVEFCTEVfU1RBVFVTIiwiTUFOQUdFX1RBQkxFUyIsIkNIRUNLX0lOX0dVRVNUUyIsIk1BTkFHRV9XQUlUTElTVCIsIlZJRVdfQU5BTFlUSUNTIl19XSwiaWF0IjoxNzg5OTc3MTI0LCJleHAiOjE3OTAwNjM1MjR9.J2Hv_0Nkbrf2TmQ3OB6kMAVzjSD5S4LANgV7qDQoRTg</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">User-Agent</td>
@@ -1074,7 +1046,7 @@ Contact Support:
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">b1d28028-15d5-4f33-8f2f-ad1375618039</td>
+                                                        <td class="text-wrap">e312c633-6b8b-4531-928e-c821a9c66d03</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1112,7 +1084,7 @@ Contact Support:
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 21 Sep 2026 00:04:12 GMT</td>
+                                                    <td class="text-wrap">Mon, 21 Sep 2026 07:52:04 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
@@ -1192,7 +1164,7 @@ Contact Support:
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-RateLimit-Remaining</td>
-                                                    <td class="text-wrap">99992</td>
+                                                    <td class="text-wrap">99988</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-RateLimit-Reset</td>
@@ -1221,10 +1193,10 @@ Contact Support:
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-34e64f11-410d-4606-b2fb-1154ff2f0dda" class="prettyPrint">{&quot;success&quot;:true,&quot;data&quot;:{&quot;user&quot;:{&quot;user_id&quot;:&quot;c8df22bc-349a-4934-8b80-78082394ae28&quot;,&quot;email&quot;:&quot;nebati5699@cnguopin.com&quot;,&quot;first_name&quot;:&quot;Nora&quot;,&quot;last_name&quot;:&quot;Iman&quot;,&quot;phone&quot;:&quot;13344545454&quot;,&quot;avatar_url&quot;:null,&quot;birthday&quot;:null,&quot;preferred_country&quot;:null,&quot;preferred_dining_location&quot;:null,&quot;personal_notes&quot;:null,&quot;allergens&quot;:[],&quot;is_email_verified&quot;:true,&quot;preferences&quot;:null,&quot;onboarding_completed&quot;:false,&quot;onboarding_skipped&quot;:false,&quot;onboarding_progress&quot;:{&quot;/user/venues&quot;:{&quot;completed&quot;:true,&quot;completedAt&quot;:&quot;2025-12-01T10:56:13.979Z&quot;},&quot;/venues/profile/basic-information&quot;:{&quot;completed&quot;:true,&quot;completedAt&quot;:&quot;2026-01-08T11:56:48.046Z&quot;},&quot;/venues/manage-requests&quot;:{&quot;completed&quot;:true,&quot;completedAt&quot;:&quot;2026-01-09T11:16:36.652Z&quot;}},&quot;created_at&quot;:&quot;2025-09-24 11:26:26&quot;,&quot;updated_at&quot;:&quot;2026-01-09 11:16:36&quot;},&quot;current_role&quot;:&quot;HOST&quot;,&quot;current_tenant_id&quot;:&quot;2ad16e16-255c-4a23-9f30-0190f3c93c0b&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;CHECK_IN_GUESTS&quot;],&quot;available_tenants&quot;:[{&quot;tenant_id&quot;:&quot;2ad16e16-255c-4a23-9f30-0190f3c93c0b&quot;,&quot;role&quot;:&quot;HOST&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;CHECK_IN_GUESTS&quot;]},{&quot;tenant_id&quot;:&quot;691e1269-6361-44b7-8339-6bc9dacb6b34&quot;,&quot;role&quot;:&quot;HOST&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;CHECK_IN_GUESTS&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;VIEW_ANALYTICS&quot;]}]}}</code></pre>
+                                                <pre><code id="copyText-3e36a06e-77a8-4d35-a472-f682466b7ade" class="prettyPrint">{&quot;success&quot;:true,&quot;data&quot;:{&quot;user&quot;:{&quot;user_id&quot;:&quot;c8df22bc-349a-4934-8b80-78082394ae28&quot;,&quot;email&quot;:&quot;nebati5699@cnguopin.com&quot;,&quot;first_name&quot;:&quot;Nora&quot;,&quot;last_name&quot;:&quot;Iman&quot;,&quot;phone&quot;:&quot;13344545454&quot;,&quot;avatar_url&quot;:null,&quot;birthday&quot;:null,&quot;preferred_country&quot;:null,&quot;preferred_dining_location&quot;:null,&quot;personal_notes&quot;:null,&quot;allergens&quot;:[],&quot;is_email_verified&quot;:true,&quot;preferences&quot;:null,&quot;onboarding_completed&quot;:false,&quot;onboarding_skipped&quot;:false,&quot;onboarding_progress&quot;:{&quot;/user/venues&quot;:{&quot;completed&quot;:true,&quot;completedAt&quot;:&quot;2025-12-01T10:56:13.979Z&quot;},&quot;/venues/profile/basic-information&quot;:{&quot;completed&quot;:true,&quot;completedAt&quot;:&quot;2026-01-08T11:56:48.046Z&quot;},&quot;/venues/manage-requests&quot;:{&quot;completed&quot;:true,&quot;completedAt&quot;:&quot;2026-01-09T11:16:36.652Z&quot;}},&quot;created_at&quot;:&quot;2025-09-24 11:26:26&quot;,&quot;updated_at&quot;:&quot;2026-01-09 11:16:36&quot;},&quot;current_role&quot;:&quot;HOST&quot;,&quot;current_tenant_id&quot;:&quot;2ad16e16-255c-4a23-9f30-0190f3c93c0b&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;CHECK_IN_GUESTS&quot;],&quot;available_tenants&quot;:[{&quot;tenant_id&quot;:&quot;2ad16e16-255c-4a23-9f30-0190f3c93c0b&quot;,&quot;role&quot;:&quot;HOST&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;CHECK_IN_GUESTS&quot;]},{&quot;tenant_id&quot;:&quot;691e1269-6361-44b7-8339-6bc9dacb6b34&quot;,&quot;role&quot;:&quot;HOST&quot;,&quot;permissions&quot;:[&quot;MANAGE_RESERVATIONS_HOST&quot;,&quot;MANAGE_RESERVATIONS&quot;,&quot;UPDATE_TABLE_STATUS&quot;,&quot;MANAGE_TABLES&quot;,&quot;CHECK_IN_GUESTS&quot;,&quot;MANAGE_WAITLIST&quot;,&quot;VIEW_ANALYTICS&quot;]}]}}</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-34e64f11-410d-4606-b2fb-1154ff2f0dda">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-3e36a06e-77a8-4d35-a472-f682466b7ade">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1325,16 +1297,16 @@ Contact Support:
                 </div>
             </div>
             </div>
-            <div id="folder-54138c6e-9173-4232-8871-3002a11e9187" class="card-deck iteration-0">
+            <div id="folder-d99eee65-711b-4c07-a0df-69ca6be52ecd" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-danger iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-54138c6e-9173-4232-8871-3002a11e9187" aria-expanded="false" aria-controls="collapse" id="requests-54138c6e-9173-4232-8871-3002a11e9187" class="collapsed text-white z-block">
+                    <div class="card-header  bg-success iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd" aria-expanded="false" aria-controls="collapse" id="requests-d99eee65-711b-4c07-a0df-69ca6be52ecd" class="collapsed text-white z-block">
                     Iteration: 1 - Update user profile <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-54138c6e-9173-4232-8871-3002a11e9187" class="collapse" aria-labelledby="requests-54138c6e-9173-4232-8871-3002a11e9187">
+                    <div id="collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd" class="collapse" aria-labelledby="requests-d99eee65-711b-4c07-a0df-69ca6be52ecd">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1350,14 +1322,14 @@ Contact Support:
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 1498ms</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 37ms</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 408B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>50 %</strong></h5>
+                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1386,7 +1358,7 @@ Contact Support:
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Authorization</td>
-                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzhkZjIyYmMtMzQ5YS00OTM0LThiODAtNzgwODIzOTRhZTI4IiwiZW1haWwiOiJuZWJhdGk1Njk5QGNuZ3VvcGluLmNvbSIsInRlbmFudF9jb250ZXh0Ijp7InRlbmFudF9pZCI6IjJhZDE2ZTE2LTI1NWMtNGEyMy05ZjMwLTAxOTBmM2M5M2MwYiIsInJvbGUiOiJIT1NUIiwicGVybWlzc2lvbnMiOlsiTUFOQUdFX1JFU0VSVkFUSU9OU19IT1NUIiwiTUFOQUdFX1JFU0VSVkFUSU9OUyIsIlVQREFURV9UQUJMRV9TVEFUVVMiLCJNQU5BR0VfVEFCTEVTIiwiTUFOQUdFX1dBSVRMSVNUIiwiQ0hFQ0tfSU5fR1VFU1RTIl19LCJhdmFpbGFibGVfdGVuYW50cyI6W3sidGVuYW50X2lkIjoiMmFkMTZlMTYtMjU1Yy00YTIzLTlmMzAtMDE5MGYzYzkzYzBiIiwicm9sZSI6IkhPU1QiLCJwZXJtaXNzaW9ucyI6WyJNQU5BR0VfUkVTRVJWQVRJT05TX0hPU1QiLCJNQU5BR0VfUkVTRVJWQVRJT05TIiwiVVBEQVRFX1RBQkxFX1NUQVRVUyIsIk1BTkFHRV9UQUJMRVMiLCJNQU5BR0VfV0FJVExJU1QiLCJDSEVDS19JTl9HVUVTVFMiXX0seyJ0ZW5hbnRfaWQiOiI2OTFlMTI2OS02MzYxLTQ0YjctODMzOS02YmM5ZGFjYjZiMzQiLCJyb2xlIjoiSE9TVCIsInBlcm1pc3Npb25zIjpbIk1BTkFHRV9SRVNFUlZBVElPTlNfSE9TVCIsIk1BTkFHRV9SRVNFUlZBVElPTlMiLCJVUERBVEVfVEFCTEVfU1RBVFVTIiwiTUFOQUdFX1RBQkxFUyIsIkNIRUNLX0lOX0dVRVNUUyIsIk1BTkFHRV9XQUlUTElTVCIsIlZJRVdfQU5BTFlUSUNTIl19XSwiaWF0IjoxNzg5OTQ5MDUyLCJleHAiOjE3OTAwMzU0NTJ9.wruzsb8EsB6b6K6yFniKYkLbxB-TdSWSsk3zSmQ1yo0</td>
+                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzhkZjIyYmMtMzQ5YS00OTM0LThiODAtNzgwODIzOTRhZTI4IiwiZW1haWwiOiJuZWJhdGk1Njk5QGNuZ3VvcGluLmNvbSIsInRlbmFudF9jb250ZXh0Ijp7InRlbmFudF9pZCI6IjJhZDE2ZTE2LTI1NWMtNGEyMy05ZjMwLTAxOTBmM2M5M2MwYiIsInJvbGUiOiJIT1NUIiwicGVybWlzc2lvbnMiOlsiTUFOQUdFX1JFU0VSVkFUSU9OU19IT1NUIiwiTUFOQUdFX1JFU0VSVkFUSU9OUyIsIlVQREFURV9UQUJMRV9TVEFUVVMiLCJNQU5BR0VfVEFCTEVTIiwiTUFOQUdFX1dBSVRMSVNUIiwiQ0hFQ0tfSU5fR1VFU1RTIl19LCJhdmFpbGFibGVfdGVuYW50cyI6W3sidGVuYW50X2lkIjoiMmFkMTZlMTYtMjU1Yy00YTIzLTlmMzAtMDE5MGYzYzkzYzBiIiwicm9sZSI6IkhPU1QiLCJwZXJtaXNzaW9ucyI6WyJNQU5BR0VfUkVTRVJWQVRJT05TX0hPU1QiLCJNQU5BR0VfUkVTRVJWQVRJT05TIiwiVVBEQVRFX1RBQkxFX1NUQVRVUyIsIk1BTkFHRV9UQUJMRVMiLCJNQU5BR0VfV0FJVExJU1QiLCJDSEVDS19JTl9HVUVTVFMiXX0seyJ0ZW5hbnRfaWQiOiI2OTFlMTI2OS02MzYxLTQ0YjctODMzOS02YmM5ZGFjYjZiMzQiLCJyb2xlIjoiSE9TVCIsInBlcm1pc3Npb25zIjpbIk1BTkFHRV9SRVNFUlZBVElPTlNfSE9TVCIsIk1BTkFHRV9SRVNFUlZBVElPTlMiLCJVUERBVEVfVEFCTEVfU1RBVFVTIiwiTUFOQUdFX1RBQkxFUyIsIkNIRUNLX0lOX0dVRVNUUyIsIk1BTkFHRV9XQUlUTElTVCIsIlZJRVdfQU5BTFlUSUNTIl19XSwiaWF0IjoxNzg5OTc3MTI0LCJleHAiOjE3OTAwNjM1MjR9.J2Hv_0Nkbrf2TmQ3OB6kMAVzjSD5S4LANgV7qDQoRTg</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">User-Agent</td>
@@ -1398,7 +1370,7 @@ Contact Support:
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">a42e9458-3ddd-4d9d-b2e8-730fb86f59e8</td>
+                                                        <td class="text-wrap">e8fbd7ce-8dca-4437-8d76-520df91c7ba9</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1460,7 +1432,7 @@ Contact Support:
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 21 Sep 2026 00:04:12 GMT</td>
+                                                    <td class="text-wrap">Mon, 21 Sep 2026 07:52:04 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
@@ -1540,7 +1512,7 @@ Contact Support:
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-RateLimit-Remaining</td>
-                                                    <td class="text-wrap">99991</td>
+                                                    <td class="text-wrap">99987</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-RateLimit-Reset</td>
@@ -1565,10 +1537,10 @@ Contact Support:
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-78bc2506-ef82-4f9f-a6b7-36626cd8fd3f" class="prettyPrint">{&quot;success&quot;:true,&quot;message&quot;:&quot;Profile updated successfully&quot;,&quot;data&quot;:{&quot;user&quot;:{&quot;user_id&quot;:&quot;c8df22bc-349a-4934-8b80-78082394ae28&quot;,&quot;email&quot;:&quot;nebati5699@cnguopin.com&quot;,&quot;first_name&quot;:&quot;Nora&quot;,&quot;last_name&quot;:&quot;Iman&quot;,&quot;phone&quot;:&quot;13344545454&quot;,&quot;avatar_url&quot;:null,&quot;birthday&quot;:null,&quot;preferred_country&quot;:null,&quot;preferred_dining_location&quot;:null,&quot;personal_notes&quot;:null,&quot;allergens&quot;:[],&quot;is_email_verified&quot;:true,&quot;updated_at&quot;:&quot;2026-01-09 11:16:36&quot;}}}</code></pre>
+                                                <pre><code id="copyText-5e9e9385-70ea-4060-a357-4c6a6a4a7087" class="prettyPrint">{&quot;success&quot;:true,&quot;message&quot;:&quot;Profile updated successfully&quot;,&quot;data&quot;:{&quot;user&quot;:{&quot;user_id&quot;:&quot;c8df22bc-349a-4934-8b80-78082394ae28&quot;,&quot;email&quot;:&quot;nebati5699@cnguopin.com&quot;,&quot;first_name&quot;:&quot;Nora&quot;,&quot;last_name&quot;:&quot;Iman&quot;,&quot;phone&quot;:&quot;13344545454&quot;,&quot;avatar_url&quot;:null,&quot;birthday&quot;:null,&quot;preferred_country&quot;:null,&quot;preferred_dining_location&quot;:null,&quot;personal_notes&quot;:null,&quot;allergens&quot;:[],&quot;is_email_verified&quot;:true,&quot;updated_at&quot;:&quot;2026-01-09 11:16:36&quot;}}}</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-78bc2506-ef82-4f9f-a6b7-36626cd8fd3f">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-5e9e9385-70ea-4060-a357-4c6a6a4a7087">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1591,22 +1563,22 @@ Contact Support:
                                                 </tr>
                                                 <tr >
                                                     <td >Response time is less than 600ms</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
-                                                    <td class="text-center">1</td>
+                                                    <td class="text-center">2</td>
+                                                    <td class="text-center">0</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row ">
+                                    <div class="row d-none">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
@@ -1616,10 +1588,6 @@ Contact Support:
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Response time is less than 600ms</td>
-                                                                <td class="w-55"><pre><code >expected 1498 to be below 600</code></pre></td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1704,13 +1672,13 @@ $('#openAll').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#folder-025d475d-a7d9-402b-b999-1581686b863d-iteration-0').removeClass('collapsed')
-            $('#folder-collapse-025d475d-a7d9-402b-b999-1581686b863d-iteration-0').addClass('show')
+            $('#folder-d1a0e893-c82b-4e4e-8f40-56c345f008c3-iteration-0').removeClass('collapsed')
+            $('#folder-collapse-d1a0e893-c82b-4e4e-8f40-56c345f008c3-iteration-0').addClass('show')
         $('#openAll').html("Collapse Folders");
         break;
     case 2:
-            $('#folder-025d475d-a7d9-402b-b999-1581686b863d-iteration-0').addClass('collapsed')
-            $('#folder-collapse-025d475d-a7d9-402b-b999-1581686b863d-iteration-0').removeClass('show')
+            $('#folder-d1a0e893-c82b-4e4e-8f40-56c345f008c3-iteration-0').addClass('collapsed')
+            $('#folder-collapse-d1a0e893-c82b-4e4e-8f40-56c345f008c3-iteration-0').removeClass('show')
         $('#openAll').html("Expand Folders");
         break;
 }
@@ -1726,33 +1694,33 @@ $('#openAllRequests').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#requests-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').removeClass('collapsed')
-            $('#collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').removeClass('collapsed')
-            $('#requests-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').addClass('show')
-            $('#collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').addClass('show')
-            $('#requests-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').removeClass('collapsed')
-            $('#collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').removeClass('collapsed')
-            $('#requests-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').addClass('show')
-            $('#collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').addClass('show')
-            $('#requests-54138c6e-9173-4232-8871-3002a11e9187').removeClass('collapsed')
-            $('#collapse-54138c6e-9173-4232-8871-3002a11e9187').removeClass('collapsed')
-            $('#requests-54138c6e-9173-4232-8871-3002a11e9187').addClass('show')
-            $('#collapse-54138c6e-9173-4232-8871-3002a11e9187').addClass('show')
+            $('#requests-5de89928-a676-445a-98f7-cb44168e82a4').removeClass('collapsed')
+            $('#collapse-5de89928-a676-445a-98f7-cb44168e82a4').removeClass('collapsed')
+            $('#requests-5de89928-a676-445a-98f7-cb44168e82a4').addClass('show')
+            $('#collapse-5de89928-a676-445a-98f7-cb44168e82a4').addClass('show')
+            $('#requests-18a5830a-e84f-491e-ba78-945c5eb1eedd').removeClass('collapsed')
+            $('#collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd').removeClass('collapsed')
+            $('#requests-18a5830a-e84f-491e-ba78-945c5eb1eedd').addClass('show')
+            $('#collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd').addClass('show')
+            $('#requests-d99eee65-711b-4c07-a0df-69ca6be52ecd').removeClass('collapsed')
+            $('#collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd').removeClass('collapsed')
+            $('#requests-d99eee65-711b-4c07-a0df-69ca6be52ecd').addClass('show')
+            $('#collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd').addClass('show')
         $('#openAllRequests').html("Collapse Requests");
         break;
     case 2:
-            $('#requests-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').addClass('collapsed')
-            $('#collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').addClass('collapsed')
-            $('#requests-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').removeClass('show')
-            $('#collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').removeClass('show')
-            $('#requests-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').addClass('collapsed')
-            $('#collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').addClass('collapsed')
-            $('#requests-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').removeClass('show')
-            $('#collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').removeClass('show')
-            $('#requests-54138c6e-9173-4232-8871-3002a11e9187').addClass('collapsed')
-            $('#collapse-54138c6e-9173-4232-8871-3002a11e9187').addClass('collapsed')
-            $('#requests-54138c6e-9173-4232-8871-3002a11e9187').removeClass('show')
-            $('#collapse-54138c6e-9173-4232-8871-3002a11e9187').removeClass('show')
+            $('#requests-5de89928-a676-445a-98f7-cb44168e82a4').addClass('collapsed')
+            $('#collapse-5de89928-a676-445a-98f7-cb44168e82a4').addClass('collapsed')
+            $('#requests-5de89928-a676-445a-98f7-cb44168e82a4').removeClass('show')
+            $('#collapse-5de89928-a676-445a-98f7-cb44168e82a4').removeClass('show')
+            $('#requests-18a5830a-e84f-491e-ba78-945c5eb1eedd').addClass('collapsed')
+            $('#collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd').addClass('collapsed')
+            $('#requests-18a5830a-e84f-491e-ba78-945c5eb1eedd').removeClass('show')
+            $('#collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd').removeClass('show')
+            $('#requests-d99eee65-711b-4c07-a0df-69ca6be52ecd').addClass('collapsed')
+            $('#collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd').addClass('collapsed')
+            $('#requests-d99eee65-711b-4c07-a0df-69ca6be52ecd').removeClass('show')
+            $('#collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd').removeClass('show')
         $('#openAllRequests').html("Expand Requests");
         break;
 }
@@ -1768,33 +1736,33 @@ $('#openAllSkipped').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#skipped-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').removeClass('collapsed')
-            $('#skipped-collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').removeClass('collapsed')
-            $('#skipped-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').addClass('show')
-            $('#skipped-collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').addClass('show')
-            $('#skipped-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').removeClass('collapsed')
-            $('#skipped-collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').removeClass('collapsed')
-            $('#skipped-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').addClass('show')
-            $('#skipped-collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').addClass('show')
-            $('#skipped-54138c6e-9173-4232-8871-3002a11e9187').removeClass('collapsed')
-            $('#skipped-collapse-54138c6e-9173-4232-8871-3002a11e9187').removeClass('collapsed')
-            $('#skipped-54138c6e-9173-4232-8871-3002a11e9187').addClass('show')
-            $('#skipped-collapse-54138c6e-9173-4232-8871-3002a11e9187').addClass('show')
+            $('#skipped-5de89928-a676-445a-98f7-cb44168e82a4').removeClass('collapsed')
+            $('#skipped-collapse-5de89928-a676-445a-98f7-cb44168e82a4').removeClass('collapsed')
+            $('#skipped-5de89928-a676-445a-98f7-cb44168e82a4').addClass('show')
+            $('#skipped-collapse-5de89928-a676-445a-98f7-cb44168e82a4').addClass('show')
+            $('#skipped-18a5830a-e84f-491e-ba78-945c5eb1eedd').removeClass('collapsed')
+            $('#skipped-collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd').removeClass('collapsed')
+            $('#skipped-18a5830a-e84f-491e-ba78-945c5eb1eedd').addClass('show')
+            $('#skipped-collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd').addClass('show')
+            $('#skipped-d99eee65-711b-4c07-a0df-69ca6be52ecd').removeClass('collapsed')
+            $('#skipped-collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd').removeClass('collapsed')
+            $('#skipped-d99eee65-711b-4c07-a0df-69ca6be52ecd').addClass('show')
+            $('#skipped-collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd').addClass('show')
         $('#openAllSkipped').html("Collapse All Skipped Tests");
         break;
     case 2:
-            $('#skipped-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').addClass('collapsed')
-            $('#skipped-collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').addClass('collapsed')
-            $('#skipped-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').removeClass('show')
-            $('#skipped-collapse-1856efbe-fb07-4fa0-a3ad-35d95978ff1f').removeClass('show')
-            $('#skipped-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').addClass('collapsed')
-            $('#skipped-collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').addClass('collapsed')
-            $('#skipped-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').removeClass('show')
-            $('#skipped-collapse-ec32ca34-d862-4d38-80e7-71a81b5fc2d1').removeClass('show')
-            $('#skipped-54138c6e-9173-4232-8871-3002a11e9187').addClass('collapsed')
-            $('#skipped-collapse-54138c6e-9173-4232-8871-3002a11e9187').addClass('collapsed')
-            $('#skipped-54138c6e-9173-4232-8871-3002a11e9187').removeClass('show')
-            $('#skipped-collapse-54138c6e-9173-4232-8871-3002a11e9187').removeClass('show')
+            $('#skipped-5de89928-a676-445a-98f7-cb44168e82a4').addClass('collapsed')
+            $('#skipped-collapse-5de89928-a676-445a-98f7-cb44168e82a4').addClass('collapsed')
+            $('#skipped-5de89928-a676-445a-98f7-cb44168e82a4').removeClass('show')
+            $('#skipped-collapse-5de89928-a676-445a-98f7-cb44168e82a4').removeClass('show')
+            $('#skipped-18a5830a-e84f-491e-ba78-945c5eb1eedd').addClass('collapsed')
+            $('#skipped-collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd').addClass('collapsed')
+            $('#skipped-18a5830a-e84f-491e-ba78-945c5eb1eedd').removeClass('show')
+            $('#skipped-collapse-18a5830a-e84f-491e-ba78-945c5eb1eedd').removeClass('show')
+            $('#skipped-d99eee65-711b-4c07-a0df-69ca6be52ecd').addClass('collapsed')
+            $('#skipped-collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd').addClass('collapsed')
+            $('#skipped-d99eee65-711b-4c07-a0df-69ca6be52ecd').removeClass('show')
+            $('#skipped-collapse-d99eee65-711b-4c07-a0df-69ca6be52ecd').removeClass('show')
         $('#openAllSkipped').html("Expand All Skipped Tests");
         break;
 }
@@ -1812,21 +1780,9 @@ let failedItemContent
 let failedItemHeading
 switch (clickCount){
     case 1:
-            failedItemHeading = $('#fails-6b335790-640c-4dd8-a808-f1b5c7bee8a9');
-            failedItemContent = $("#fails-collapse-6b335790-640c-4dd8-a808-f1b5c7bee8a9");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
         $('#openAllFailed').html("Collapse All Failed Tests");
         break;
     case 2:
-            failedItemHeading = $('#fails-6b335790-640c-4dd8-a808-f1b5c7bee8a9');
-            failedItemContent = $("#fails-collapse-6b335790-640c-4dd8-a808-f1b5c7bee8a9");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
         $('#openAllFailed').html("Expand All Failed Tests");
         break;
 }
@@ -1951,8 +1907,6 @@ function scrollFunction() {
     document.getElementById("openAllRequests").style.display = "none";
 
 
-    document.getElementById("showOnlyFailures").style.display = "none";
-    document.getElementById("openAllFailed").style.display = "none";
   } else {
     document.getElementById("topOfRequestsScreen").style.display = "none";
     document.getElementById("topOfFailuresScreen").style.display = "none";
@@ -1960,8 +1914,6 @@ function scrollFunction() {
     document.getElementById("openAll").style.display = "block";
     document.getElementById("openAllRequests").style.display = "block";
 
-    document.getElementById("showOnlyFailures").style.display = "block";
-    document.getElementById("openAllFailed").style.display = "block";
   }
 }
 
@@ -2024,7 +1976,6 @@ window.onload = function () {
   document.getElementById('iteration-0').click();
   document.getElementById('iterationSelected').innerHTML = `Iteration ${document.getElementById('iteration-0').innerHTML} selected`
 
-    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
 }
 </script>
 
